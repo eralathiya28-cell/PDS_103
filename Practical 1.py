@@ -1,65 +1,84 @@
-import pandas as pd
-import numpy as np
+a = 10
+b = "25"
+c = "deep"
+d = False
 
-data = {
-    "name": ["A", "B", "C", "D", "E", "F"],
-    "age": [20, 21, 19, 22, 20, 21],
-    "marks": [80, 75, 90, 65, 85, 70],
-    "city": ["Ahmedabad", "Surat", "Ahmedabad", "Vadodara", "Surat", "Ahmedabad"]
-}
+print("Type of a =", type(a))
+print("Type of b =", type(b))
+print("Type of c =", type(c))
+print("Type of d =", type(d))
 
-df = pd.DataFrame(data)
+m = 5
+n = 7
 
-print(df)
+print("Sum =", m + n)
+print("Subtraction =", m - n)
+print("Multiplication =", m * n)
+print("Division =", m / n)
+print("Modulo =", m % n)
+print("Power =", m ** 3)
 
-print(df.head())
-print(df.shape)
-print(df.info())
-print(df.describe())
+a = 5
 
-print(df["marks"].mean())
-print(df["marks"].median())
-print(df["marks"].max())
-print(df["marks"].min())
+print("Assignment =", a)
 
-print(df["age"].value_counts())
-print(df["city"].value_counts())
+a += 5
+print("Addition Assignment =", a)
 
-print(df.groupby("city")["marks"].mean())
+a -= 5
+print("Subtraction Assignment =", a)
 
-print(df.groupby("age")["marks"].mean())
+a *= 5
+print("Multiplication Assignment =", a)
 
-print(df[df["marks"] > 75])
+a %= 5
+print("Modulo Assignment =", a)
 
-print(df[(df["marks"] > 70) & (df["age"] >= 20)])
+a //= 3
+print("Floor Division Assignment =", a)
 
-print(df.sort_values("marks", ascending=False))
+a **= 2
+print("Exponential Assignment =", a)
 
-print(df.corr(numeric_only=True))
 
-print(df["marks"].std())
-print(df["marks"].var())
 
-print(df["marks"].describe())
+a = 2
+b = 4
 
-a = df["marks"]
+print("a == b :", a == b)
+print("a != b :", a != b)
+print("a < b :", a < b)
+print("a > b :", a > b)
+print("a <= b :", a <= b)
+print("a >= b :", a >= b)
 
-print(np.mean(a))
-print(np.median(a))
-print(np.std(a))
 
-print(df["marks"].quantile(0.25))
-print(df["marks"].quantile(0.50))
-print(df["marks"].quantile(0.75))
+a = True
+b = False
 
-df["result"] = np.where(df["marks"] >= 40, "Pass", "Fail")
+print("AND operator =", a and b)
+print("OR operator =", a or b)
+print("NOT operator =", not b)
 
-print(df)
 
-print(df.groupby("result").size())
+s = "Micro-processor & interface by HOD."
 
-print(df.groupby("city")["marks"].agg(["mean", "max", "min"]))
+print("HOD" in s)
+print("python" not in s)
 
-print(df.nlargest(3, "marks"))
+a = ["deep", "dharmik"]
+b = ["deep", "dharmik"]
 
-print(df.nsmallest(3, "marks"))
+print(a is b)
+print(a is not b)
+
+a = 2
+b = 3
+
+print("a & b =", a & b)
+print("a | b =", a | b)
+print("a ^ b =", a ^ b)
+print("~a =", ~a)
+print("a << 1 =", a << 1)
+print("a >> 1 =", a >> 1)
+
